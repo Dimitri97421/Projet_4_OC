@@ -1,1 +1,1 @@
-# Projet_4_OC
+# Projet_4_OpenC
