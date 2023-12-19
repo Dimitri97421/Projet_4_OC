@@ -99,9 +99,9 @@ header {
                 width: 16px;
                 transition: opacity 1s;
                 color:transparent;
-                &:hover{
+                &:focus{
                     opacity: 1;
-                    background: linear-gradient(to bottom, #D49BFF, $couleur-secondaire);
+                    background: linear-gradient(to bottom, $couleur-primaire, $couleur-secondaire);
                     background-clip: text;
                 }
             }
@@ -111,10 +111,10 @@ header {
     &__entree{
         display: flex;
         flex-direction: column;
-        width: 90%;
+        width: 92%;
         height: 0px;
         opacity: 0;
-        animation: fadeIn3 2s 1s forwards;
+        animation: fadeIn 2s 1s forwards;
         &__p{
             border-bottom: 2px solid #99E2D0;
             width: 40px;
@@ -126,22 +126,21 @@ header {
             margin-bottom: 20px;
             background-color: white;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             width: 100%;
             height: 72px;
             &__text{
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
-                width: 80%;
+                width: 90%;
                 min-width: 200px;
                 height: 42px;
-                padding-left: 5px;
+                padding-left: 10px;
                 &__h2{
                     width: 100%;
                     margin-top: 0px;
                     margin-bottom: 0px;
-                    font-size: 18px;
+                    font-size: 17.5px;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
@@ -158,9 +157,10 @@ header {
             }
             &__h2{
                 display: flex;
-                width: 10%;
                 margin-top: 25px;
                 margin-bottom: 0px;
+                margin-right: 10px;
+                margin-left: 10px;
                 font-size: 18px;
             }
             &__anim{
@@ -188,10 +188,10 @@ header {
     &__plats{
         display: flex;
         flex-direction: column;
-        width: 90%;
+        width: 92%;
         height: 0px;
         opacity: 0;
-        animation: fadeIn3 2s 2s forwards;
+        animation: fadeIn2 2s 2s forwards;
         &__p{
             border-bottom: 2px solid #99E2D0;
             width: 40px;
@@ -203,22 +203,21 @@ header {
             margin-bottom: 20px;
             background-color: white;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             width: 100%;
             height: 72px;
             &__text{
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
-                width: 80%;
+                width: 90%;
                 min-width: 200px;
                 height: 42px;
-                padding-left: 5px;
+                padding-left: 10px;
                 &__h2{
                     width: 100%;
                     margin-top: 0px;
                     margin-bottom: 0px;
-                    font-size: 18px;
+                    font-size: 17.5px;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
@@ -235,9 +234,10 @@ header {
             }
             &__h2{
                 display: flex;
-                width: 10%;
                 margin-top: 25px;
                 margin-bottom: 0px;
+                margin-right: 10px;
+                margin-left: 10px;
                 font-size: 18px;
             }
             &__anim{
@@ -265,7 +265,7 @@ header {
     &__desserts{
         display: flex;
         flex-direction: column;
-        width: 90%;
+        width: 92%;
         height: 0px;
         opacity: 0;
         animation: fadeIn3 2s 3s forwards;
@@ -280,22 +280,21 @@ header {
             margin-bottom: 20px;
             background-color: white;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             width: 100%;
             height: 72px;
             &__text{
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
-                width: 80%;
+                width: 90%;
                 min-width: 200px;
                 height: 42px;
-                padding-left: 5px;
+                padding-left: 10px;
                 &__h2{
                     width: 100%;
                     margin-top: 0px;
                     margin-bottom: 0px;
-                    font-size: 18px;
+                    font-size: 17.5px;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
@@ -312,9 +311,10 @@ header {
             }
             &__h2{
                 display: flex;
-                width: 10%;
                 margin-top: 25px;
                 margin-bottom: 0px;
+                margin-right: 10px;
+                margin-left: 10px;
                 font-size: 18px;
             }
             &__anim{
@@ -374,6 +374,7 @@ header {
         &:hover{
             background: linear-gradient(to top, #D49BFF, $couleur-secondaire);
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            font-size: 13.5px;
         }
     }
 }
@@ -469,6 +470,14 @@ header {
 
     .menu{
         width: 80%;
+    }
+
+    .menu__titre_menu__coeur__i2{
+        &:hover{
+            opacity: 1;
+            background: linear-gradient(to bottom, $couleur-primaire, $couleur-secondaire);
+            background-clip: text;
+        }
     }
 
     .menu__entree{

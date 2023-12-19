@@ -175,6 +175,7 @@ header .location__p {
 .reservation__button:hover {
   background: linear-gradient(to top, #D49BFF, #FF79DA);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  font-size: 13.5px;
 }
 
 .fonctionnement {
@@ -205,6 +206,7 @@ header .location__p {
   font-size: 16px;
   border-radius: 25px;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
 }
 .fonctionnement__guide__h2__i {
   width: 24px;
@@ -254,6 +256,66 @@ header .location__p {
   width: 375px;
   margin-top: 0px;
   padding-top: 0px;
+  z-index: 1;
+  position: relative;
+}
+.restaurants__list__card_1_2_3_4__i1 {
+  opacity: 1;
+  width: 16px;
+  position: absolute;
+  justify-content: center;
+  margin-top: 30px;
+  top: 195px;
+  right: 60px;
+  border: none;
+  z-index: 2;
+}
+.restaurants__list__card_1_2_3_4__i2 {
+  opacity: 0;
+  width: 16px;
+  position: absolute;
+  justify-content: center;
+  margin-top: 30px;
+  top: 195px;
+  right: 60px;
+  color: transparent;
+  transition: opacity 1s;
+  z-index: 2;
+}
+.restaurants__list__card_1_2_3_4__i2:hover {
+  opacity: 1;
+  background: linear-gradient(to bottom, #D49BFF, #FF79DA);
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.restaurants__list__card_1_2_3_4__i1-2 {
+  opacity: 1;
+  width: 16px;
+  position: absolute;
+  justify-content: center;
+  margin-top: 30px;
+  top: 485px;
+  right: 60px;
+  border: none;
+  z-index: 2;
+}
+.restaurants__list__card_1_2_3_4__i2-2 {
+  opacity: 0;
+  width: 16px;
+  position: absolute;
+  justify-content: center;
+  margin-top: 30px;
+  top: 485px;
+  right: 60px;
+  color: transparent;
+  transition: opacity 1s;
+  z-index: 2;
+}
+.restaurants__list__card_1_2_3_4__i2-2:hover {
+  opacity: 1;
+  background: linear-gradient(to bottom, #D49BFF, #FF79DA);
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 .restaurants__list__card_1_2_3_4__a {
   text-decoration: none;
@@ -288,7 +350,7 @@ header .location__p {
   align-items: center;
   color: #006400;
   top: 20px;
-  left: 69%;
+  left: 72%;
 }
 .restaurants__list__card_1_2_3_4__card__content {
   display: flex;
@@ -317,31 +379,6 @@ header .location__p {
 .restaurants__list__card_1_2_3_4__card__content__text__p {
   margin-top: 0px;
   margin-bottom: 20px;
-}
-.restaurants__list__card_1_2_3_4__card__content__i1 {
-  opacity: 1;
-  width: 16px;
-  position: relative;
-  justify-content: center;
-  margin-top: 30px;
-  right: 10%;
-  border: none;
-}
-.restaurants__list__card_1_2_3_4__card__content__i2 {
-  opacity: 0;
-  width: 16px;
-  position: absolute;
-  justify-content: center;
-  margin-top: 30px;
-  right: 10%;
-  color: transparent;
-  transition: opacity 1s;
-}
-.restaurants__list__card_1_2_3_4__card__content__i2:hover {
-  opacity: 1;
-  background: linear-gradient(to bottom, #D49BFF, #FF79DA);
-  -webkit-background-clip: text;
-          background-clip: text;
 }
 
 .footer {
@@ -414,7 +451,7 @@ header .location__p {
 }
 
 /* RESPONSIVE TABLETS AND DESKTOP*/
-@media (min-width: 767.98px) {
+@media (min-width: 1024px) {
   .reservation h1 {
     width: 100%;
   }
@@ -423,19 +460,22 @@ header .location__p {
     width: 100%;
   }
   .fonctionnement__h1 {
-    width: 70%;
+    width: 930px;
+    min-width: 810px;
   }
   .fonctionnement__guide {
     display: flex;
     flex-direction: row;
-    width: 70%;
+    width: 930px;
+    min-width: 820px;
     justify-content: space-between;
   }
   .fonctionnement__guide__h2 {
     margin-right: 20px;
   }
   .restaurants__h1 {
-    width: 70%;
+    width: 930px;
+    min-width: 780px;
   }
   .restaurants__list {
     display: flex;
@@ -443,9 +483,13 @@ header .location__p {
     width: 100%;
   }
   .restaurants__list__card_1_2_3_4 {
-    width: 78%;
+    width: 1025px;
+    min-width: 870px;
     flex-direction: row;
     justify-content: space-around;
+  }
+  .restaurants__list__card_1_2_3_4__card__p {
+    left: 315px;
   }
   .restaurants__list__card_1_2_3_4__a {
     display: flex;
@@ -455,6 +499,34 @@ header .location__p {
   .restaurants__list__card_1_2_3_4__card {
     min-width: 280px;
     width: 80%;
+  }
+  .restaurants__list__card_1_2_3_4__i1 {
+    top: 195px;
+    left: 400px;
+  }
+  .restaurants__list__card_1_2_3_4__i1-2 {
+    right: 100px;
+    top: 195px;
+  }
+  .restaurants__list__card_1_2_3_4__i2 {
+    top: 195px;
+    left: 400px;
+  }
+  .restaurants__list__card_1_2_3_4__i2:hover {
+    opacity: 1;
+    background: linear-gradient(to bottom, #D49BFF, #FF79DA);
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
+  .restaurants__list__card_1_2_3_4__i2-2 {
+    top: 195px;
+    right: 100px;
+  }
+  .restaurants__list__card_1_2_3_4__i2-2:hover {
+    opacity: 1;
+    background: linear-gradient(to bottom, #D49BFF, #FF79DA);
+    -webkit-background-clip: text;
+            background-clip: text;
   }
   .footer {
     flex-direction: row-reverse;
