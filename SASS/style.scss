@@ -31,6 +31,7 @@ body{
 
 .loader-container{
     position: fixed;
+    pointer-events: none;
     border-radius: 5px;
     background:#F2F2F2;
     width: 100%;
@@ -160,11 +161,15 @@ header {
         color: white;
         border: 0px;
         border-radius: 25px;
-        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-        &:hover{
-            background: linear-gradient(to top, #D49BFF, #FF79DA);
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            font-size: 13.5px;
+        transition: box-shadow 1s, filter 1s;
+        &:hover {
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.35);
+            filter: brightness(1.1);
+        }
+    
+        &:not(:hover) {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+            filter: brightness(1);
         }
     }
 }
@@ -272,11 +277,14 @@ header {
                 right: 60px;
                 color:transparent;
                 transition: opacity 1s;
+                background: linear-gradient(to bottom, #D49BFF, $couleur-secondaire);
+                background-clip: text;
                 z-index: 2;
                 &:hover{
                     opacity: 1;
-                    background: linear-gradient(to bottom, #D49BFF, $couleur-secondaire);
-                    background-clip: text;
+                }
+                &:not(:hover){
+                    opacity: 0;
                 }
             }
             &__i1-2{
@@ -300,11 +308,14 @@ header {
                 right: 60px;
                 color:transparent;
                 transition: opacity 1s;
+                background: linear-gradient(to bottom, #D49BFF, $couleur-secondaire);
+                background-clip: text;
                 z-index: 2;
                 &:hover{
                     opacity: 1;
-                    background: linear-gradient(to bottom, #D49BFF, $couleur-secondaire);
-                    background-clip: text;
+                }
+                &:not(:hover){
+                    opacity: 0;
                 }
             }
             &__a{
@@ -356,7 +367,7 @@ header {
                         padding-left: 10px;
                         &__h2{
                             font-size: 18px;
-                            font-weight: 700px;
+                            font-weight: 700;
                             margin-bottom: 0px;
                             margin-top: 0px;
                             padding-top: 15px;

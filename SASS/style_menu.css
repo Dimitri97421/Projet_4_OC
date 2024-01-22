@@ -73,7 +73,7 @@ header .logo__a {
   display: flex;
   width: 100%;
   font-family: "Shrikhand";
-  font-weight: 400px;
+  font-weight: 400;
   font-style: italic;
   font-size: 28px;
 }
@@ -94,12 +94,15 @@ header .logo__a {
   width: 16px;
   transition: opacity 1s;
   color: transparent;
-}
-.menu__titre_menu__coeur__i2:focus {
-  opacity: 1;
-  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background: linear-gradient(to bottom, #D49BFF, #FF79DA);
   -webkit-background-clip: text;
           background-clip: text;
+}
+.menu__titre_menu__coeur__i2:hover {
+  opacity: 1;
+}
+.menu__titre_menu__coeur__i2:not(:hover) {
+  opacity: 0;
 }
 .menu__entree {
   display: flex;
@@ -378,12 +381,15 @@ header .logo__a {
   color: white;
   border: 0px;
   border-radius: 25px;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 1s, filter 1s;
 }
 .menu__button:hover {
-  background: linear-gradient(to top, #D49BFF, #FF79DA);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  font-size: 13.5px;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.35);
+  filter: brightness(1.1);
+}
+.menu__button:not(:hover) {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+  filter: brightness(1);
 }
 
 .footer {
